@@ -1,0 +1,42 @@
+(Scenario header and console lines not captured for this run.)
+
+  █ THRESHOLDS
+
+    http_req_duration
+    ✓ 'p(95)<500' p(95)=72.37ms
+
+    http_req_failed
+    ✗ 'rate<0.01' rate=94.86%
+
+
+  █ TOTAL RESULTS
+
+    checks_total.......: 290015 1595.884169/s
+    checks_succeeded...: 5.13%  14879 out of 290015
+    checks_failed......: 94.86% 275136 out of 290015
+
+    ✗ status is 301
+      ↳  5% — ✓ 14879 / ✗ 275136
+
+    HTTP
+    http_req_duration..............: avg=38.6ms  min=7.24ms  med=28.63ms max=7.48s p(90)=53.71ms  p(95)=72.37ms
+      { expected_response:true }...: avg=79.36ms min=22.19ms med=55.47ms max=3.88s p(90)=121.14ms p(95)=184.66ms
+    http_req_failed................: 94.86% 275136 out of 290035
+    http_reqs......................: 290035 1595.994224/s
+
+    EXECUTION
+    iteration_duration.............: avg=39.22ms min=7.24ms  med=28.8ms  max=7.48s p(90)=55.49ms  p(95)=74.9ms
+    iterations.....................: 290015 1595.884169/s
+    vus............................: 3      min=0                max=100
+    vus_max........................: 100    min=100              max=100
+
+    NETWORK
+    data_received..................: 51 MB  280 kB/s
+    data_sent......................: 11 MB  59 kB/s
+
+
+
+
+running (3m01.7s), 000/100 VUs, 290015 complete and 0 interrupted iterations
+default ✓ [======================================] 000/100 VUs  3m0s
+ERRO[0182] thresholds on metrics 'http_req_failed' have been crossed

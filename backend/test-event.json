@@ -1,0 +1,5 @@
+{
+  "routeKey": "POST /shorten",
+  "body": "{\"url\": \"https://aws.amazon.com\"}",
+  "requestContext": {"domainName": "test.example.com"}
+}

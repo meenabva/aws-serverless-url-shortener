@@ -1,0 +1,52 @@
+     scenarios: (100.00%) 1 scenario, 10 max VUs, 3m30s max duration (incl. graceful stop):
+              * default: Up to 10 looping VUs for 3m0s over 4 stages (gracefulRampDown: 30s, gracefulStop: 30s)
+
+INFO[0077] 503 {"message":"Service Unavailable"}         source=console
+INFO[0077] 503 {"message":"Service Unavailable"}         source=console
+INFO[0077] 503 {"message":"Service Unavailable"}         source=console
+INFO[0084] 503 {"message":"Service Unavailable"}         source=console
+INFO[0084] 503 {"message":"Service Unavailable"}         source=console
+INFO[0092] 503 {"message":"Service Unavailable"}         source=console
+INFO[0092] 503 {"message":"Service Unavailable"}         source=console
+
+
+  █ THRESHOLDS
+
+    http_req_duration
+    ✓ 'p(95)<500' p(95)=70.27ms
+
+    http_req_failed
+    ✗ 'rate<0.01' rate=46.01%
+
+
+  █ TOTAL RESULTS
+
+    checks_total.......: 24884  136.736739/s
+    checks_succeeded...: 53.95% 13425 out of 24884
+    checks_failed......: 46.04% 11459 out of 24884
+
+    ✗ status is 301
+      ↳  53% — ✓ 13425 / ✗ 11459
+
+    HTTP
+    http_req_duration..............: avg=44.86ms min=15.65ms med=39.76ms max=877.23ms p(90)=66.45ms p(95)=70.27ms
+      { expected_response:true }...: avg=57.62ms min=22.09ms med=55.26ms max=877.23ms p(90)=69.08ms p(95)=76.8ms
+    http_req_failed................: 46.01% 11459 out of 24904
+    http_reqs......................: 24904  136.846638/s
+
+    EXECUTION
+    iteration_duration.............: avg=45.2ms  min=15.65ms med=40.01ms max=877.23ms p(90)=66.77ms p(95)=70.8ms
+    iterations.....................: 24884  136.736739/s
+    vus............................: 1      min=0              max=10
+    vus_max........................: 10     min=10             max=10
+
+    NETWORK
+    data_received..................: 3.6 MB 20 kB/s
+    data_sent......................: 922 kB 5.1 kB/s
+
+
+
+
+running (3m02.0s), 00/10 VUs, 24884 complete and 0 interrupted iterations
+default ✓ [======================================] 00/10 VUs  3m0s
+ERRO[0182] thresholds on metrics 'http_req_failed' have been crossed

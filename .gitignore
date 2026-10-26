@@ -1,0 +1,22 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Local secrets and config
+.env
+*.pem
+*credentials*
+
+# Terraform (if added later)
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
